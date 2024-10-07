@@ -11,7 +11,7 @@ const config: Config = {
   url: 'https://github.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/ck-docs/',
+  baseUrl: '/',
   trailingSlash: false,
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -28,6 +28,11 @@ const config: Config = {
     defaultLocale: 'ru',
     locales: ['ru'],
   },
+
+  themes: [
+    // Remove any existing plugins or themes that are related to search
+    require.resolve("@getcanary/docusaurus-theme-search-pagefind"),
+  ],
 
   presets: [
     [
